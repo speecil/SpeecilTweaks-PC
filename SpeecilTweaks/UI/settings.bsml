@@ -1,0 +1,57 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+	<tab-selector tab-tag='tabs'/>
+
+	<horizontal preferred-width="58" preferred-height="80" pad-top="8">
+		<tab tab-name="Menu Tweaks" tags="tabs">
+			<tab-selector tab-tag='tabs2' size-delta-x="5"/>
+			<tab tab-name="Main Menu" tags="tabs2">
+				<vertical bg="round-rect-panel" pad="2" size-delta-y="-15" size-delta-x="5">
+					<toggle-setting value="playButtonActive" text="Enable Play Button" apply-on-change="true" hover-hint="Enables or disables the play button based on the toggle"/>
+					<string-setting value="playText" text="Play Button Text" apply-on-change="true" hover-hint="Changes the text on the play button based on the input"/>
+					<toggle-setting value="practiceButtonActive" text="Enable Practice Button" apply-on-change="true" hover-hint="Enables or disables the practice button based on the toggle"/>
+					<string-setting value="practiceText" text="Practice Button Text" apply-on-change="true" hover-hint="Changes the text on the practice button based on the input"/>
+					<color-setting value="menuButtonColour" text="Main Menu Button Text Colour" apply-on-change="true" hover-hint="Sets the text on the main menu buttons based on the colour picker"/>
+				</vertical>
+			</tab>
+			<tab tab-name="Pause Menu" tags="tabs2">
+				<vertical bg="round-rect-panel" pad="2" size-delta-y="-15" size-delta-x="5">
+					<toggle-setting value="enablePMenuTweaks" text="Enable Pause Menu Tweaks" apply-on-change="true" hover-hint="Removes unnecessary info on the pause menu and increases the song name size"/>
+					<color-setting value="pMenuColour" text="Pause Menu Text Colour" apply-on-change="true" hover-hint="The colour of the song name if pause menu tweaks are enabled"/>
+					<color-setting value="pMenuBackColour" text="Pause Menu Background Colour" apply-on-change="true" hover-hint="The colour of the pause menu if pause menu tweaks are enabled"/>
+				</vertical>
+			</tab>
+			<tab tab-name="Results Screen" tags="tabs2">
+				<vertical bg="round-rect-panel" pad="2" size-delta-y="-15" size-delta-x="5">
+					<string-setting value="resultText" text="Pass Result Text" apply-on-change="true" hover-hint="What the text on the result screen is when you pass a map"/>
+					<string-setting value="resultFailText" text="Fail Result Text" apply-on-change="true" hover-hint="What the text on the result screen is when you fail a map"/>
+					<color-setting value="rBackColour" text="Pass Background Colour" apply-on-change="true" hover-hint="What the colour on the result screen is when you pass a map"/>
+					<color-setting value="rfBackColour" text="Fail Background Colour" apply-on-change="true" hover-hint="What the colour on the result screen is when you fail a map"/>
+				</vertical>
+			</tab>
+		</tab>
+		<tab tab-name="Gameplay" tags="tabs">
+			<vertical bg="round-rect-panel" pad="2" spacing="4">
+				<text text="Gameplay" font-align="Top" font-size="7" />
+				<toggle-setting value="removeAllParticles" text="Disable ALL Particles/Debris (restart on toggle)" apply-on-change="true" hover-hint="A one click button to disable all particles and debris (will restart on toggle)"/>
+				<toggle-setting value="disableBlur" text="Disable Blur" apply-on-change="true" hover-hint="Disables the blur on the saber"/>
+				<toggle-setting value="disableRumble" text="Disable Gameplay Rumble" apply-on-change="true" hover-hint="Disables all rumble in gameplay"/>
+				<toggle-setting value="disableHitscore" text="Disable Hitscore" apply-on-change="true" hover-hint="Disables the hit score when you hit a note"/>
+			</vertical>
+		</tab>
+		<tab tab-name="Quality Of Life" tags="tabs">
+			<vertical bg="round-rect-panel" pad="2" spacing="4">
+				<toggle-setting value="cancelReset" text="Dont Reset Basegame settings on Cancel" apply-on-change="true" hover-hint="Stops the game resetting the base game settings on cancel"/>
+				<toggle-setting value="skipHealth" text="Skip Health and Safety" apply-on-change="true" hover-hint="You will no longer be healthy, or safe ;)"/>
+			</vertical>
+		</tab>
+		<tab tab-name="Support Me" tags="tabs">
+			<vertical bg="round-rect-panel" bg-color="fuchsia" pad="2" spacing="4">
+				<text color="aqua" text="Patreon" font-align="Center" font-size="7" />
+				<button on-click="Patreon" text="Link to Patreon" hover-hint="Thank you! (will open in browser)"/>
+				<text color="magenta" text="Dev Discord" font-align="Center" font-size="6" />
+				<button on-click="Discord" text="Link to Discord" hover-hint="Thank you! (will open in browser)"/>
+				<text text="Message speecil#5350 on discord if there are any issues!" outline-color="black" outline-width="3" font-size="3" align="Center" word-wrapping="true"/>
+			</vertical>
+		</tab>
+	</horizontal>
+</bg>
