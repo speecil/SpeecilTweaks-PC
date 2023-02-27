@@ -124,7 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HarmonyPatches\Gameplay.cs" />
-    <Compile Include="HarmonyPatches\Haptic.cs" />
     <Compile Include="HarmonyPatches\Multi.cs" />
     <Compile Include="HarmonyPatches\PauseMenu.cs" />
     <Compile Include="HarmonyPatches\Results.cs" />

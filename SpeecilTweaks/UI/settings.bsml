@@ -32,7 +32,7 @@
 		<tab tab-name="Gameplay" tags="tabs">
 			<vertical bg="round-rect-panel" pad="2" spacing="4">
 				<text text="Gameplay" font-align="Top" font-size="7" />
-				<toggle-setting value="removeAllParticles" text="Disable ALL Particles/Debris (restart on toggle)" apply-on-change="true" hover-hint="A one click button to disable all particles and debris (will restart on toggle)"/>
+				<toggle-setting value="removeAllParticles" text="Disable ALL Particles" apply-on-change="true" hover-hint="A one click button to disable all particles"/>
 				<toggle-setting value="disableBlur" text="Disable Blur" apply-on-change="true" hover-hint="Disables the blur on the saber"/>
 				<toggle-setting value="disableRumble" text="Disable Gameplay Rumble" apply-on-change="true" hover-hint="Disables all rumble in gameplay"/>
 				<toggle-setting value="disableHitscore" text="Disable Hitscore" apply-on-change="true" hover-hint="Disables the hit score when you hit a note"/>

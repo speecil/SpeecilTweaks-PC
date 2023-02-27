@@ -26,19 +26,18 @@ namespace SpeecilTweaks.HarmonyPatches
                     ____multiplayerButton.GetComponentInChildren<HMUI.CurvedTextMeshPro>(____multiplayerButton.gameObject).color = (Config.Instance.menuButtonColour);
                     ____campaignButton.GetComponentInChildren<HMUI.CurvedTextMeshPro>(____campaignButton.gameObject).color = (Config.Instance.menuButtonColour);
                     ____partyButton.GetComponentInChildren<HMUI.CurvedTextMeshPro>(____partyButton.gameObject).color = (Config.Instance.menuButtonColour);
-                    if (Config.Instance.removeAllParticles)
-                    {
-                        foreach (var dust in Resources.FindObjectsOfTypeAll<ParticleSystem>())
-                            if (dust.name == "DustPS") dust.gameObject.SetActive(false);
-                    }
-                    else
-                    {
-                        foreach (var dust in Resources.FindObjectsOfTypeAll<ParticleSystem>())
-                            if (dust.name == "DustPS") dust.gameObject.SetActive(true);
-                    }
                     if (firstActivation)
                     {
-                        
+                        if (Config.Instance.removeAllParticles)
+                        {
+                            foreach (var dust in Resources.FindObjectsOfTypeAll<ParticleSystem>())
+                                if (dust.name == "DustPS") dust.gameObject.SetActive(false);
+                        }
+                        else
+                        {
+                            foreach (var dust in Resources.FindObjectsOfTypeAll<ParticleSystem>())
+                                if (dust.name == "DustPS") dust.gameObject.SetActive(true);
+                        }
                     }
                 }
             }
