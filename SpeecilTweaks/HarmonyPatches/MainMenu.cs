@@ -38,6 +38,7 @@ namespace SpeecilTweaks.HarmonyPatches
                             foreach (var dust in Resources.FindObjectsOfTypeAll<ParticleSystem>())
                                 if (dust.name == "DustPS") dust.gameObject.SetActive(true);
                         }
+                        Resources.FindObjectsOfTypeAll<HapticFeedbackController>().FirstOrDefault().gameObject.SetActive(!Config.Instance.disableRumble);
                     }
                 }
             }
