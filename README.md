@@ -23,4 +23,3 @@ Cool little tweaks I think are pretty neat
   - One Click Particle/Debris Remover
   - Disable Rumble Toggle
   - Disable HitScore Toggle
-  - Disable the blur on the sabers
