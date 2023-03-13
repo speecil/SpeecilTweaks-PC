@@ -22,7 +22,6 @@ namespace SpeecilTweaks
         public bool practiceButtonActive = true;
         public bool removeAllParticles = false;
         public bool enablePMenuTweaks = false;
-        public bool disableBlur = false;
         public bool disableRumble = false;
         public bool disableHitscore = false;
         public bool skipHealth = false;

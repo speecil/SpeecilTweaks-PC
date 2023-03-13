@@ -127,7 +127,6 @@
     <Compile Include="HarmonyPatches\Multi.cs" />
     <Compile Include="HarmonyPatches\PauseMenu.cs" />
     <Compile Include="HarmonyPatches\Results.cs" />
-    <Compile Include="HarmonyPatches\Saber.cs" />
     <Compile Include="HarmonyPatches\SongDetail.cs" />
     <Compile Include="HarmonyPatches\MainMenu.cs" />
     <Compile Include="Plugin.cs" />

@@ -176,11 +176,6 @@ namespace SpeecilTweaks.UI
             get => config.enablePMenuTweaks;
             set => config.enablePMenuTweaks = value;
         }
-        bool disableBlur
-        {
-            get => config.disableBlur;
-            set => config.disableBlur = value;
-        }
 
         bool disableRumble
         {
