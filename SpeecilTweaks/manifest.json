@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
   "id": "SpeecilTweaks",
   "name": "SpeecilTweaks",
-  "author": "",
+  "author": "Speecil",
   "version": "0.0.1",
-  "description": "",
-  "gameVersion": "1.18.3",
+  "description": "Cool tweaks i think are pretty neat",
+  "gameVersion": "1.28.0",
   "dependsOn": {
     "BSIPA": "^4.2.0"
   }
