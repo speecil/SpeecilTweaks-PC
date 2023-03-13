@@ -11,7 +11,7 @@ namespace SpeecilTweaks.HarmonyPatches
     internal class Results
     {
         [HarmonyPatch]
-        internal class ResultsText
+        internal class ResultsTweaks
         {
             [HarmonyPatch(typeof(ResultsViewController))]
             [HarmonyPatch("SetDataToUI")]

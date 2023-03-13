@@ -17,7 +17,7 @@ namespace SpeecilTweaks.HarmonyPatches
     internal class Gameplay
     {
         [HarmonyPatch]
-        internal class gametweaks
+        internal class GameTweaks
         {
             [HarmonyPatch(typeof(GameplayCoreInstaller))]
             [HarmonyPatch("InstallBindings")]

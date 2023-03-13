@@ -12,7 +12,7 @@ namespace SpeecilTweaks.HarmonyPatches
     internal class PauseMenu
     {
         [HarmonyPatch]
-        internal class PauseText
+        internal class PauseTweaks
         {
             [HarmonyPatch(typeof(PauseMenuManager))]
             [HarmonyPatch("Start")]

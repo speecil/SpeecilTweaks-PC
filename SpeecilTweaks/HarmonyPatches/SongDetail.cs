@@ -10,7 +10,7 @@ namespace SpeecilTweaks.HarmonyPatches
     internal class SongDetail
     {
         [HarmonyPatch]
-        internal class ButtonText
+        internal class SongDetailsTweaks
         {
             [HarmonyPatch(typeof(StandardLevelDetailView))]
             [HarmonyPatch("RefreshContent")]

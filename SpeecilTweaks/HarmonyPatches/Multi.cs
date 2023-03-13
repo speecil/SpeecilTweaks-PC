@@ -10,7 +10,7 @@ namespace SpeecilTweaks.HarmonyPatches
     internal class Multi
     {
         [HarmonyPatch]
-        internal class ButtonText
+        internal class MultiCheck
         {
             [HarmonyPatch(typeof(LobbySetupViewController))]
             [HarmonyPatch("DidActivate")]
