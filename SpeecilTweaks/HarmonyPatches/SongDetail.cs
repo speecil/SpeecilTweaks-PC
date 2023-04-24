@@ -1,57 +1,48 @@
 ﻿using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SpeecilTweaks.HarmonyPatches
 {
-    internal class SongDetail
+    internal class SongDetailsTweaks
     {
-        [HarmonyPatch]
-        internal class SongDetailsTweaks
+        [HarmonyPatch(typeof(StandardLevelDetailView))]
+        [HarmonyPatch("RefreshContent")]
+        internal class StandardLevelDetailViewRefreshContent
         {
-            [HarmonyPatch(typeof(StandardLevelDetailView))]
-            [HarmonyPatch("RefreshContent")]
-            internal class StandardLevelDetailViewRefreshContent
+            internal static void Postfix(ref UnityEngine.UI.Button ____actionButton, ref UnityEngine.UI.Button ____practiceButton)
             {
-                internal static void Postfix(ref UnityEngine.UI.Button ____actionButton, ref UnityEngine.UI.Button ____practiceButton)
+                if (!Plugin.Instance.inMulti)
                 {
-                    if (!Plugin.Instance.inMulti)
+                    if (Config.Instance.playButtonActive)
                     {
-                        if (Config.Instance.playButtonActive)
-                        {
-                            ____actionButton.gameObject.SetActive(true);
-                            ____actionButton.GetComponentInChildren<HMUI.CurvedTextMeshPro>(____actionButton.gameObject).SetText(Config.Instance.playText);
-                        }
-                        else
-                        {
-                            ____actionButton.gameObject.SetActive(false);
-                        }
-                        if (Config.Instance.practiceButtonActive)
-                        {
-                            ____practiceButton.gameObject.SetActive(true);
-                            ____practiceButton.GetComponentInChildren<HMUI.CurvedTextMeshPro>(____practiceButton.gameObject).SetText(Config.Instance.practiceText);
-                        }
-                        else
-                        {
-                            ____practiceButton.gameObject.SetActive(false);
-                        }
+                        ____actionButton.gameObject.SetActive(true);
+                        ____actionButton.GetComponentInChildren<HMUI.CurvedTextMeshPro>(____actionButton.gameObject).SetText(Config.Instance.playText);
                     }
-                 
+                    else
+                    {
+                        ____actionButton.gameObject.SetActive(false);
+                    }
+                    if (Config.Instance.practiceButtonActive)
+                    {
+                        ____practiceButton.gameObject.SetActive(true);
+                        ____practiceButton.GetComponentInChildren<HMUI.CurvedTextMeshPro>(____practiceButton.gameObject).SetText(Config.Instance.practiceText);
+                    }
+                    else
+                    {
+                        ____practiceButton.gameObject.SetActive(false);
+                    }
                 }
+
             }
+        }
 
-            [HarmonyPatch(typeof(PracticeViewController))]
-            [HarmonyPatch("DidActivate")]
+        [HarmonyPatch(typeof(PracticeViewController))]
+        [HarmonyPatch("DidActivate")]
 
-            internal class PracticeViewControllerDidActivate
+        internal class PracticeViewControllerDidActivate
+        {
+            internal static void Postfix(ref UnityEngine.UI.Button ____playButton)
             {
-                internal static void Postfix(ref UnityEngine.UI.Button ____playButton)
-                {
-                    ____playButton.GetComponentInChildren<HMUI.CurvedTextMeshPro>(____playButton.gameObject).SetText(Config.Instance.practiceText);
-                }
+                ____playButton.GetComponentInChildren<HMUI.CurvedTextMeshPro>(____playButton.gameObject).SetText(Config.Instance.practiceText);
             }
         }
     }

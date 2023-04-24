@@ -1,6 +1,5 @@
-﻿using System.Runtime.CompilerServices;
-using IPA.Config.Stores;
-using SpeecilTweaks;
+﻿using IPA.Config.Stores;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
@@ -14,7 +13,7 @@ namespace SpeecilTweaks
         public string resultText = "Well Done!";
         public string resultFailText = "You Suck!";
         public Color menuButtonColour = Color.cyan;
-        public Color rBackColour = Color.green; 
+        public Color rBackColour = Color.green;
         public Color rfBackColour = Color.red;
         public Color pMenuColour = Color.magenta;
         public Color pMenuBackColour = Color.yellow;

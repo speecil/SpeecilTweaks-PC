@@ -1,25 +1,15 @@
-﻿using IPA;
-using IPA.Config;
+﻿using HarmonyLib;
+using IPA;
 using IPA.Config.Stores;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using HarmonyLib;
-using IPALogger = IPA.Logging.Logger;
 using SpeecilTweaks.UI;
-using SpeecilTweaks.HarmonyPatches;
-using System.Diagnostics;
 using System.Reflection;
-using System.Runtime.InteropServices;
+using IPALogger = IPA.Logging.Logger;
 
 namespace SpeecilTweaks
 {
     [Plugin(RuntimeOptions.SingleStartInit)]
     public class Plugin
-    {   
+    {
         public bool inMulti = false;
         internal static Plugin Instance { get; private set; }
         internal static IPALogger Log { get; private set; }

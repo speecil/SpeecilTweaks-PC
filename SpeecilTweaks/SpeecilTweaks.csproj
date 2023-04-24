@@ -131,7 +131,6 @@
     <Compile Include="HarmonyPatches\MainMenu.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Configuration\PluginConfig.cs" />
-    <Compile Include="SpeecilTweaksController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\UI.cs" />
   </ItemGroup>

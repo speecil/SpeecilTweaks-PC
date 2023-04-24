@@ -5,8 +5,9 @@
   "author": "Speecil",
   "version": "0.0.1",
   "description": "Cool tweaks i think are pretty neat",
-  "gameVersion": "1.28.0",
+  "gameVersion": "1.29.0",
   "dependsOn": {
-    "BSIPA": "^4.2.0"
+    "BSIPA": "^4.2.0",
+    "BeatSaberMarkupLanguage": "^1.6.10"
   }
 }
